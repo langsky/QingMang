@@ -1,0 +1,44 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+                android:id="@+id/view_items"
+                android:background="@color/card_gray"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/fresh"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                app:indicatorColor="@color/google_yellow"
+                app:indicatorName="BallGridPulseIndicator"/>
+
+        <ImageView
+                android:onClick="refresh"
+                android:id="@+id/try_again"
+                android:visibility="invisible"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:src="@drawable/ic_refresh_yellow_800_24dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+
+        <TextView
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:id="@+id/text_info"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/custom_yellow"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+</layout>

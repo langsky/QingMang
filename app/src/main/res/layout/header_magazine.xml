@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.github.langsky.qingmang.utils.ColorUtils"/>
+
+        <import type="android.support.v7.widget.RecyclerView.ViewHolder"/>
+
+        <import type="com.github.langsky.qingmang.utils.ClickHandler"/>
+
+        <variable
+                name="clickHandler"
+                type="ClickHandler"/>
+
+        <variable
+                name="viewHolder"
+                type="ViewHolder"/>
+
+
+        <variable
+                name="title"
+                type="String"/>
+
+        <variable
+                name="colorUtils"
+                type="ColorUtils"/>
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/card_gray">
+
+        <FrameLayout
+                android:background="@{ColorUtils.getColor(colorUtils.backgroundColor.color)}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                        android:drawableStart="@drawable/ic_book_black_18dp"
+                        android:drawablePadding="5dp"
+                        android:background="@drawable/corner_top"
+                        android:onClick="@{()->clickHandler.onClick(viewHolder, viewHolder.adapterPosition)}"
+                        android:layout_gravity="center"
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingStart="25dp"
+                        android:paddingEnd="45dp"
+                        android:gravity="center_vertical"
+                        android:text="@{title}"
+                        android:textStyle="bold"/>
+            </FrameLayout>
+
+        <View
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#CCC"/>
+    </LinearLayout>
+
+</layout>

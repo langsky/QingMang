@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.github.langsky.qingmang.mvp.model.Article"/>
+
+        <variable
+                name="article"
+                type="Article"/>
+    </data>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+        <com.github.langsky.qingmang.widget.img.ScaleImageView
+                android:id="@+id/cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/article_cover_height"
+                android:layout_marginBottom="@dimen/article_padding"
+                app:imageUrl="@{article.cover}"
+                app:scale_float="0.618"/>
+
+        <com.github.langsky.qingmang.widget.img.ScaleImageView
+                android:id="@+id/photo"
+                android:layout_marginTop="@dimen/article_padding"
+                android:layout_marginBottom="@dimen/article_padding_end"
+                android:layout_marginStart="@dimen/article_padding_end"
+                android:layout_marginEnd="@dimen/article_padding_end"
+                android:layout_width="@dimen/article_photo_size"
+                android:layout_height="@dimen/article_photo_size"
+                app:photoUrl="@{article.photo}"
+                app:scale_float="1.0"/>
+
+        <TextView
+                android:id="@+id/author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/article_padding"
+                android:layout_marginBottom="@dimen/article_padding_end"
+                android:textColor="@color/author_text_color"
+                android:textSize="@dimen/article_author_text_size"
+                android:text="@{article.author}"/>
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/article_padding"
+                android:layout_marginBottom="@dimen/article_padding"
+                android:layout_marginStart="@dimen/article_padding_end"
+                android:layout_marginEnd="@dimen/article_padding_end"
+                android:textColor="@color/message_text_color"
+                android:textSize="@dimen/article_title_text_size"
+                android:text="@{article.title}"/>
+
+        <TextView
+                android:id="@+id/summary"
+                android:layout_marginTop="@dimen/article_padding"
+                android:layout_marginBottom="@dimen/article_padding"
+                android:layout_marginStart="@dimen/article_padding_end"
+                android:layout_marginEnd="@dimen/article_padding_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/message_text_color"
+                android:textSize="@dimen/article_summary_text_size"
+                android:text="@{article.summary}"/>
+
+    </merge>
+
+</layout>

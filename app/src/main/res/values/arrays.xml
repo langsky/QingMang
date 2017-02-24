@@ -1,0 +1,38 @@
+<?xml version= "1.0"  encoding= "utf-8" ?>
+<resources>
+    <string-array name="colors">
+        <item>#4285f4</item>
+        <item>#df5a55</item>
+        <item>#34a853</item>
+        <item>#fbbc05</item>
+    </string-array>
+
+    <string-array name="bg">
+        <item>#5a33b5e5</item>
+        <item>#5adf5a55</item>
+        <item>#5a7e57c2</item>
+        <item>#5a669900</item>
+        <item>#5aEF6C00</item>
+        <item>#5add6495</item>
+        <item>#5a72d3b4</item>
+        <item>#5aff4444</item>
+        <item>#5a76afcf</item>
+        <item>#5aff8800</item>
+        <item>#5ab9f6ca</item>
+        <item>#5ae919ff</item>
+        <item>#5a558B2F</item>
+        <item>#5ab388ff</item>
+        <item>#5aff9419</item>
+        <item>#5a6c4aa6</item>
+        <item>#5aff8a80</item>
+        <item>#5aff5252</item>
+        <item>#5afffc19</item>
+        <item>#5ae64a4a</item>
+        <item>#5affff8d</item>
+        <item>#5aff8800</item>
+        <item>#5a19dcff</item>
+        <item>#5af9bb72</item>
+        <item>#5a00e676</item>
+        <item>#5aff5252</item>
+    </string-array>
+</resources>

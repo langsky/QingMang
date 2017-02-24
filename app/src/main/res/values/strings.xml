@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">轻芒杂志</string>
+    <string name="before">上一页</string>
+    <string name="after">下一页</string>
+    <string name="magazine_title">magazine_title</string>
+    <string name="history_header">轻芒杂志</string>
+    <string name="history_magazine">杂志历史</string>
+    <string name="reading_history">阅读历史</string>
+    <string name="delete_all_history">清除所有历史</string>
+</resources>

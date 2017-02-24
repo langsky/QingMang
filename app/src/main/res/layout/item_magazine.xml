@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.support.v7.widget.RecyclerView.ViewHolder"/>
+
+        <import type="com.github.langsky.qingmang.utils.ClickHandler"/>
+
+        <variable
+                name="clickHandler"
+                type="ClickHandler"/>
+
+        <variable
+                name="viewHolder"
+                type="ViewHolder"/>
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:background="@color/card_gray"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+        <android.support.v7.widget.CardView
+                app:cardElevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="6dp"
+                app:cardBackgroundColor="@color/card_background">
+
+            <com.github.langsky.qingmang.widget.layout.PhotoCard
+                    android:id="@+id/item"
+                    android:clickable="true"
+                    android:background="?android:selectableItemBackgroundBorderless"
+                    android:onClick="@{()->clickHandler.onClick(viewHolder, viewHolder.adapterPosition)}"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+</layout>

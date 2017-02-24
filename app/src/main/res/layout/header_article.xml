@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.support.v7.widget.RecyclerView.ViewHolder"/>
+
+        <import type="com.github.langsky.qingmang.utils.ClickHandler"/>
+
+        <variable
+                name="clickHandler"
+                type="ClickHandler"/>
+
+        <variable
+                name="viewHolder"
+                type="ViewHolder"/>
+
+        <variable
+                name="title"
+                type="String"/>
+    </data>
+
+    <TextView
+            android:text="@{title}"
+            android:background="@color/text_white"
+            android:onClick="@{()->clickHandler.onClick(viewHolder, viewHolder.adapterPosition)}"
+            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:textStyle="normal|bold"/>
+
+</layout>

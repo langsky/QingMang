@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.github.langsky.qingmang.mvp.model.abs.TextModel"/>
+        <import type="android.support.v7.widget.RecyclerView.ViewHolder"/>
+
+        <import type="com.github.langsky.qingmang.utils.ClickHandler"/>
+
+        <variable
+                name="clickHandler"
+                type="ClickHandler"/>
+
+        <variable
+                name="viewHolder"
+                type="ViewHolder"/>
+
+        <variable
+                name="item"
+                type="TextModel"/>
+    </data>
+
+    <merge xmlns:android="http://schemas.android.com/apk/res/android"
+           xmlns:app="http://schemas.android.com/apk/res-auto"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:gravity="center"
+                android:text="@{item.title}"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <com.github.langsky.qingmang.widget.img.ScaleImageView
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:id="@+id/cover"
+                app:coverUrl="@{item.cover}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:scale_float="0.8"
+                />
+
+        <TextView
+                android:id="@+id/summary"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:text="@{item.summary}"
+                android:textSize="12sp"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+
+    </merge>
+</layout>

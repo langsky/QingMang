@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="com.github.langsky.qingmang.utils.ColorUtils"/>
+
+        <variable
+                name="colorUtils"
+                type="ColorUtils"/>
+
+        <variable
+                name="title"
+                type="String"/>
+
+        <import type="com.github.langsky.qingmang.utils.ClickHandler"/>
+
+        <import type="com.github.langsky.qingmang.utils.C"/>
+
+        <variable
+                name="clickHandler"
+                type="ClickHandler"/>
+    </data>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/transparent">
+
+        <View
+                android:layout_gravity="top"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/transparent"/>
+
+
+        <FrameLayout
+                android:background="@color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:background="@{ColorUtils.getColor(colorUtils.backgroundColor.color)}"
+                    android:layout_gravity="center"
+                    android:id="@+id/title"
+                    android:textColor="@color/text_white"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:paddingStart="25dp"
+                    android:paddingEnd="25dp"
+                    android:text="@{title}"
+                    android:textStyle="bold"/>
+
+            <ImageView
+                    android:onClick="@{()->clickHandler.pureClick(C.BTN_TRANSFORM_HISTORY)}"
+                    android:visibility="gone"
+                    android:id="@+id/transform_history"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_history_white_24dp"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

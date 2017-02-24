@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.github.langsky.qingmang.utils.ClickHandler"/>
+
+        <import type="com.github.langsky.qingmang.utils.C"/>
+
+        <import type="com.github.langsky.qingmang.utils.Config"/>
+
+        <variable
+                name="clickHandler"
+                type="ClickHandler"/>
+    </data>
+
+
+    <android.support.v7.widget.CardView
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackgroundBorderless"
+            android:visibility="invisible"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="@color/card_background">
+
+        <ImageView
+                android:onClick="@{()->clickHandler.pureClick(C.BTN_IMAGE)}"
+                android:clickable="true"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@{Config.UI_FLAGS.isEmpty()? @drawable/ic_visibility_24dp:@drawable/ic_visibility_off_24dp}"
+                android:id="@+id/img"/>
+
+        <com.github.langsky.qingmang.widget.img.ScaleImageView
+                android:id="@+id/flip"
+                android:onClick="@{()->clickHandler.pureClick(C.BTN_FLIP_DEFAULT_FRONT)}"
+                android:clickable="true"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:layout_marginTop="@dimen/article_padding"
+                android:layout_marginBottom="@dimen/article_padding_end"
+                android:layout_marginStart="@dimen/article_padding_end"
+                android:layout_marginEnd="@dimen/article_padding_end"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/more_vert_grey"
+                app:scale_float="1.0"/>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</layout>
