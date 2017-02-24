@@ -3,8 +3,7 @@
 
 Jsoup + DataBinding + GreenDao + Glide + MVP + RxJava
 
-[访问我访问GitHub主页](https://github.com/langsky/QingMang)
-
+[访问我访问GitHub主页](https://github.com/langsky/QingMang)，或者我的[Gitbook](https://www.gitbook.com/book/langsky/qingmang-notes/details)。
 ---
 
 免责声明：
