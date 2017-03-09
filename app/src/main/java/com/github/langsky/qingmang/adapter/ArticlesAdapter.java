@@ -14,14 +14,13 @@ import com.github.langsky.qingmang.databinding.ItemArticleBinding;
 import com.github.langsky.qingmang.mvp.model.ArticleSet;
 import com.github.langsky.qingmang.utils.BaseClickHandler;
 import com.github.langsky.qingmang.utils.C;
-import com.github.langsky.qingmang.utils.ClickHandler;
 import com.github.langsky.qingmang.utils.UIUtils;
 
 
 /**
  * @author langsky
- * @Title: ArticlesAdapter
- * @Description: An adapter class to load articles.
+ * @title: ArticlesAdapter
+ * @description: An adapter class to load articles.
  * @date 2016-12-02
  * @email guoliang.hu@outlook.com
  */
@@ -35,7 +34,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ViewHo
 
     private Context context;
     private boolean hasNextPage; //whether has next page.
-    private ArticleSet articleSet;
+    private ArticleSet articleSet; //current article set.
     private ViewHolder currentHolder; //current ViewHolder.
 
     private final String title;
