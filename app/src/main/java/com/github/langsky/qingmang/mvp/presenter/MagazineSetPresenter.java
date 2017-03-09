@@ -1,16 +1,11 @@
 package com.github.langsky.qingmang.mvp.presenter;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
+
 import android.content.Context;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
-import com.github.langsky.qingmang.R;
 import com.github.langsky.qingmang.adapter.HasHeaderFooterAdapter;
 import com.github.langsky.qingmang.adapter.MagazinesAdapter;
 import com.github.langsky.qingmang.adapter.MagazinesHistoryAdapter;
@@ -27,13 +22,10 @@ import com.github.langsky.qingmang.utils.BaseClickHandler;
 import com.github.langsky.qingmang.utils.C;
 import com.github.langsky.qingmang.utils.ColorUtils;
 import com.wang.avi.AVLoadingIndicatorView;
-import com.wang.avi.Indicator;
-
-import org.stringtemplate.v4.ST;
 
 import java.util.List;
 
-import rx.Observable;
+
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
